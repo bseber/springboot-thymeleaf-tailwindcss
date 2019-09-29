@@ -1,0 +1,18 @@
+# intellij
+.idea/
+*.iml
+
+# vscode
+.vscode/
+.classpath
+.project
+.settings/
+
+# maven
+target/
+
+# frontend-maven-plugin
+node/
+
+# nodejs
+node_modules/
