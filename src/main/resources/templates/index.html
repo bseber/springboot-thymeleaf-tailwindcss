@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="fragments/head :: head(~{::title})">
+<head th:replace="fragments/head :: head(~{::title},~{::script})">
 	<title>SpringBoot - Thymeleaf - TailwindCSS</title>
+	<script th:src="@{/js/bundle-1.js}"></script>
+	<script th:src="@{/js/bundle-2.js}"></script>
 </head>
 <body>
 

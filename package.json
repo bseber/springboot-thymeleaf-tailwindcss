@@ -3,15 +3,25 @@
 	"author": "Benjamin Seber <seber@synyx.de> (https://www.synyx.de)",
 	"private": true,
 	"scripts": {
-		"build": "postcss src/main/css/**/*.css --base src/main/css --dir target/classes/static/css",
-		"dev": "onchange -i src/main/css -- npm run build"
+		"build": "npm run build:css && npm run build:js",
+		"build:css": "postcss src/main/css/**/*.css --base src/main/css --dir target/classes/static/css",
+		"build:js": "rollup -c",
+		"dev": "concurrently \"npm:watch-js\" \"npm:watch-css\"",
+		"watch-css": "onchange -i src/main/css -- npm run build:css",
+		"watch-js": "rollup -c -w"
 	},
 	"dependencies": {
+		"@babel/cli": "^7.6.2",
+		"@babel/core": "^7.6.2",
+		"@babel/preset-env": "^7.6.2",
 		"@fullhuman/postcss-purgecss": "^1.3.0",
 		"autoprefixer": "^9.6.1",
+		"concurrently": "^4.1.2",
 		"cssnano": "^4.1.10",
 		"onchange": "^6.1.0",
 		"postcss-cli": "^6.1.3",
+		"rollup": "^1.22.0",
+		"rollup-plugin-terser": "^5.1.2",
 		"tailwindcss": "^1.1.2"
 	}
 }
