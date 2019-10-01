@@ -1,14 +1,11 @@
 {
 	"name": "springboot-thymeleaf-tailwindcss",
-	"version": "0.0.1",
-	"description": "",
+	"author": "Benjamin Seber <seber@synyx.de> (https://www.synyx.de)",
+	"private": true,
 	"scripts": {
 		"build": "postcss src/main/css/**/*.css --base src/main/css --dir target/classes/static/css",
 		"dev": "onchange -i src/main/css -- npm run build"
 	},
-	"keywords": [],
-	"author": "Benjamin Seber <seber@synyx.de> (https://www.synyx.de)",
-	"license": "Apache 2.0",
 	"dependencies": {
 		"@fullhuman/postcss-purgecss": "^1.3.0",
 		"autoprefixer": "^9.6.1",
