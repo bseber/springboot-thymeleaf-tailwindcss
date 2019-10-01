@@ -25,3 +25,6 @@ ij_visual_guides = 80,120
 [*.md]
 indent_style = space
 trim_trailing_whitespace = false
+
+[*.yml]
+indent_style = space
