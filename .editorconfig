@@ -10,7 +10,6 @@ indent_style = tab
 indent_size = 2
 
 [*.java]
-indent_size = 4
 ij_visual_guides = 120,160
 
 [*.html]
