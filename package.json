@@ -3,8 +3,8 @@
 	"version": "0.0.1",
 	"description": "",
 	"scripts": {
-		"build": "postcss src/main/resources/css/**/*.css --base src/main/resources/css --dir target/classes/static/css",
-		"dev": "onchange -i src/main/resources/css -- npm run build"
+		"build": "postcss src/main/css/**/*.css --base src/main/css --dir target/classes/static/css",
+		"dev": "onchange -i src/main/css -- npm run build"
 	},
 	"keywords": [],
 	"author": "Benjamin Seber <seber@synyx.de> (https://www.synyx.de)",
